@@ -16,7 +16,7 @@
 		"strictNullChecks": true,
 		"resolveJsonModule": true,
 		"sourceMap": true,
-		"incremental": true
+		"noUncheckedIndexedAccess": true
 	},
 	"include": [
 		"./src/**/*"

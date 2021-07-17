@@ -1,6 +1,7 @@
 const path = require('path')
 const webpack = require('webpack')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
+const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const mode = process.env.NODE_ENV ?? 'development'
 const isProd = mode === 'production'
@@ -30,6 +31,7 @@ module.exports = {
 						/\.d\.ts.map$/,
 					]
 				}),
+				new ForkTsCheckerWebpackPlugin(),
 			].filter(Boolean),
 			resolve: {
 				extensions: ['.tsx', '.ts', '.js'],

@@ -29,6 +29,9 @@ pnpm start
 # build for production, see packages/frontend/dist
 # and packages/backend/dist for production artefacts
 pnpm build
+
+# update dependencies interactively
+pnpm run update
 ```
 
 Enjoy the experience!

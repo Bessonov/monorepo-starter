@@ -20,12 +20,12 @@
 	"author": "Anton Bessonov",
 	"license": "MIT",
 	"dependencies": {
-		"@bessonovs/node-http-router": "0.0.5",
+		"@bessonovs/node-http-router": "0.0.6",
 		"micro": "9.3.5-canary.3",
 		"shared": "1.0.0"
 	},
 	"devDependencies": {
-		"@types/micro": "7.3.4",
+		"@types/micro": "7.3.6",
 		"@types/node": "15.0.3"
 	}
 }

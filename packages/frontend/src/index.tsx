@@ -4,3 +4,5 @@ import { App } from './App'
 import 'tailwindcss/tailwind.css'
 
 render(<App />, document.getElementById('root'))
+
+module.hot?.accept()
