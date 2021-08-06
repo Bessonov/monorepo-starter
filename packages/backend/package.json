@@ -5,17 +5,9 @@
 	"main": "index.js",
 	"sideEffects": false,
 	"scripts": {
-		"start": "ultra start:all",
-		"start:all": "pnpm run start:watch && pnpm run start:nodemon",
-		"start:watch": "webpack --watch",
-		"start:nodemon": "nodemon --delay 80ms --exec 'kill-port --port 3000,9228; node --inspect=0.0.0.0:9228 ./dist/index.js'",
+		"start": "webpack --watch",
 		"build": "NODE_ENV=production webpack",
 		"test": "echo \"Error: no test specified\" && exit 1"
-	},
-	"ultra": {
-		"concurrent": [
-			"start:all"
-		]
 	},
 	"author": "Anton Bessonov",
 	"license": "MIT",

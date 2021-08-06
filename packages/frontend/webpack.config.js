@@ -9,9 +9,9 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 const CompressionPlugin = require("compression-webpack-plugin")
 
-// release path is used for cache forever strategy on CDN Usage:
+// release path is used for cache forever strategy on CDN. Usage:
 // RELEASE_PATH=/version pnpm build
-const RELEASE_PATH = process.env.RELEASE_PATH ?? '/'
+const RELEASE_PATH = process.env.RELEASE_PATH ?? ''
 
 // should css go into separate file?
 // Probably, it's better to inline small css files.

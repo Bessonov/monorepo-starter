@@ -6,7 +6,7 @@ Example/starter for webpack monorepo
 
 A monorepo example with some interesting features:
 - [code sharing](packages/shared/src/index.ts) between frontend and backend
-- creates [single js file](packages/backend/package.json#L12) for node deployment
+- creates [single js file](packages/backend/package.json#L9) for node deployment
 - starts everything with [one command](package.json#L7) only
 - uses [tailwindcss with jit](https://tailwindcss.com/docs/just-in-time-mode)
 - uses react fast refresh and restarts server on changes

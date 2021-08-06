@@ -1,5 +1,9 @@
 const { merge } = require('webpack-merge')
-const { config } = require('../../webpack.common.config.js')
+const NodemonPlugin = require('nodemon-webpack-plugin')
+const {
+	config,
+	isDev,
+} = require('../../webpack.common.config.js')
 
 module.exports = merge(config({
 	context: __dirname,
@@ -15,6 +19,12 @@ module.exports = merge(config({
 		moduleIds: 'named',
 		mangleExports: false,
 	},
+	plugins: [
+		isDev && new NodemonPlugin({
+			delay: '100',
+			exec: 'kill-port --port 3000,9228 > /dev/null; node --inspect=0.0.0.0:9228',
+		}),
+	].filter(Boolean),
 	module: {
 		rules: [
 			{

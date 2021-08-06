@@ -5,7 +5,7 @@ const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const mode = process.env.NODE_ENV ?? 'development'
 const isProd = mode === 'production'
-const isDev = !mode
+const isDev = !isProd
 
 module.exports = {
 	mode,
@@ -28,7 +28,7 @@ module.exports = {
 					paths: [
 						/\.js$/,
 						/\.d\.ts$/,
-						/\.d\.ts.map$/,
+						/\.map$/,
 					]
 				}),
 				new ForkTsCheckerWebpackPlugin(),
