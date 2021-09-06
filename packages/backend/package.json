@@ -7,7 +7,8 @@
 	"scripts": {
 		"start": "webpack --watch",
 		"build": "NODE_ENV=production webpack",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"postinstall": "rm -rf node_modules/.cache"
 	},
 	"author": "Anton Bessonov",
 	"license": "MIT",
@@ -18,6 +19,6 @@
 	},
 	"devDependencies": {
 		"@types/micro": "7.3.6",
-		"@types/node": "15.0.3"
+		"@types/node": "16.7.10"
 	}
 }

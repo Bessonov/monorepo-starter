@@ -7,7 +7,8 @@
 	"scripts": {
 		"start": "kill-port --port 8080; NODE_ENV=development webpack serve",
 		"build": "NODE_ENV=production webpack",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"postinstall": "rm -rf node_modules/.cache"
 	},
 	"author": "Anton Bessonov",
 	"license": "MIT",
@@ -17,7 +18,7 @@
 		"shared": "1.0.0"
 	},
 	"devDependencies": {
-		"@types/react": "17.0.16",
+		"@types/react": "17.0.20",
 		"@types/react-dom": "17.0.9",
 		"@types/webpack-env": "1.16.2"
 	}

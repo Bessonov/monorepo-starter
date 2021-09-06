@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const mode = process.env.NODE_ENV ?? 'development'
@@ -16,7 +15,9 @@ module.exports = {
 	}) {
 		return {
 			mode,
-			cache: true,
+			cache: {
+				type: 'filesystem',
+			},
 			output: {
 				path: path.resolve(context, './dist'),
 				filename: 'index.js',
@@ -43,13 +44,6 @@ module.exports = {
 					path: false,
 					util: false,
 				},
-				plugins: [
-					new TsconfigPathsPlugin({
-						logLevel: 'info',
-						mainFields: 'module',
-						extensions: ['.tsx', '.ts'],
-					})
-				]
 			},
 		}
 	}
