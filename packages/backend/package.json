@@ -19,6 +19,6 @@
 	},
 	"devDependencies": {
 		"@types/micro": "7.3.6",
-		"@types/node": "16.7.10"
+		"@types/node": "16.10.2"
 	}
 }

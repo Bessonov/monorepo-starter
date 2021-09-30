@@ -18,7 +18,7 @@
 		"shared": "1.0.0"
 	},
 	"devDependencies": {
-		"@types/react": "17.0.20",
+		"@types/react": "17.0.26",
 		"@types/react-dom": "17.0.9",
 		"@types/webpack-env": "1.16.2"
 	}

@@ -23,7 +23,6 @@ module.exports = merge(config({
 		path: path.resolve(__dirname, 'dist', ...RELEASE_PATH.split('/')),
 		publicPath: RELEASE_PATH,
 	},
-	devtool: 'source-map',
 	devServer: {
 		hot: true,
 		host: '0.0.0.0',

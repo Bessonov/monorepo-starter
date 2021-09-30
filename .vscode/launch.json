@@ -1,0 +1,14 @@
+{
+	"configurations": [
+		{
+			"name": "backend",
+			"type": "node",
+			"request": "attach",
+			"restart": true,
+			"port": 9228,
+			"skipFiles": [
+				"<node_internals>/**"
+			]
+		},
+	]
+}

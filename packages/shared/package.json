@@ -10,6 +10,6 @@
 	"author": "Anton Bessonov",
 	"license": "MIT",
 	"devDependencies": {
-		"@types/node": "16.7.10"
+		"@types/node": "16.10.2"
 	}
 }
