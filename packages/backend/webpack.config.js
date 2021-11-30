@@ -22,7 +22,7 @@ module.exports = merge(config({
 	plugins: [
 		isDev && new NodemonPlugin({
 			delay: '100',
-			exec: 'kill-port --port 3000,9228 > /dev/null; node --inspect=0.0.0.0:9228',
+			exec: 'kill-port --port 3000,9228 > /dev/null; node -r source-map-support/register --inspect=0.0.0.0:9228',
 		}),
 	].filter(Boolean),
 	module: {
