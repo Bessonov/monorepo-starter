@@ -24,7 +24,6 @@ module.exports = merge(config({
 		publicPath: RELEASE_PATH,
 	},
 	devServer: {
-		hot: true,
 		host: '0.0.0.0',
 	},
 	optimization: {
@@ -35,7 +34,6 @@ module.exports = merge(config({
 		].filter(Boolean),
 	},
 	plugins: [
-		isDev && new webpack.HotModuleReplacementPlugin(),
 		isDev && new ReactRefreshWebpackPlugin(),
 		new MiniCssExtractPlugin({
 			experimentalUseImportModule: true,
@@ -80,6 +78,8 @@ module.exports = merge(config({
 			},
 			{
 				test: /\.css$/i,
+				// https://stackoverflow.com/questions/55505894/webpack-mini-css-extract-plugin-not-outputting-css-file/60482491#60482491
+				sideEffects: true,
 				use: [
 					{
 						loader: MiniCssExtractPlugin.loader,
