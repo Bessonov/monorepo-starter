@@ -8,8 +8,5 @@
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Anton Bessonov",
-	"license": "MIT",
-	"devDependencies": {
-		"@types/node": "16.11.11"
-	}
+	"license": "MIT"
 }
