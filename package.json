@@ -18,31 +18,39 @@
 	"author": "Anton Bessonov",
 	"license": "MIT",
 	"devDependencies": {
-		"@pmmmwh/react-refresh-webpack-plugin": "0.5.7",
-		"@types/node": "16.11.11",
-		"autoprefixer": "10.4.7",
+		"@pmmmwh/react-refresh-webpack-plugin": "0.5.11",
+		"@types/node": "20.9.1",
+		"autoprefixer": "10.4.16",
 		"compression-webpack-plugin": "10.0.0",
-		"css-loader": "6.7.1",
-		"css-minimizer-webpack-plugin": "4.0.0",
-		"fork-ts-checker-webpack-plugin": "7.2.11",
-		"html-webpack-plugin": "5.5.0",
-		"kill-port": "2.0.0",
-		"mini-css-extract-plugin": "2.6.0",
-		"nodemon": "2.0.16",
-		"nodemon-webpack-plugin": "4.7.1",
-		"postcss": "8.4.14",
-		"postcss-loader": "7.0.0",
-		"postcss-preset-env": "7.6.0",
-		"react-refresh": "0.13.0",
-		"react-refresh-typescript": "2.0.4",
-		"source-map-loader": "3.0.1",
-		"tailwindcss": "3.0.24",
-		"ts-loader": "9.3.0",
-		"typescript": "4.7.2",
+		"css-loader": "6.8.1",
+		"css-minimizer-webpack-plugin": "5.0.1",
+		"fork-ts-checker-webpack-plugin": "9.0.2",
+		"html-webpack-plugin": "5.5.3",
+		"kill-port": "1.6.1",
+		"mini-css-extract-plugin": "2.7.6",
+		"nodemon": "3.0.1",
+		"nodemon-webpack-plugin": "4.8.2",
+		"postcss": "8.4.31",
+		"postcss-loader": "7.3.3",
+		"postcss-preset-env": "9.3.0",
+		"react-refresh": "0.14.0",
+		"react-refresh-typescript": "2.0.9",
+		"source-map-loader": "4.0.1",
+		"tailwindcss": "3.3.5",
+		"ts-loader": "9.5.1",
+		"typescript": "5.2.2",
 		"ultra-runner": "3.10.5",
-		"webpack": "5.72.1",
-		"webpack-cli": "4.9.2",
-		"webpack-dev-server": "4.9.0",
-		"webpack-merge": "5.8.0"
+		"webpack": "5.89.0",
+		"webpack-cli": "5.1.4",
+		"webpack-dev-server": "4.15.1",
+		"webpack-merge": "5.10.0"
+	},
+	"packageManager": "pnpm@8.10.5",
+	"pnpm": {
+		"updateConfig": {
+			"ignoreDependencies": [
+				"kill-port"
+			]
+		}
 	}
 }

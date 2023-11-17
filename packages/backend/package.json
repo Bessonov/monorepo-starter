@@ -13,12 +13,11 @@
 	"author": "Anton Bessonov",
 	"license": "MIT",
 	"dependencies": {
-		"@bessonovs/node-http-router": "1.0.0",
-		"micro": "9.3.5-canary.3",
+		"@bessonovs/node-http-router": "2.3.0",
+		"micro": "10.0.1",
 		"shared": "1.0.0"
 	},
 	"devDependencies": {
-		"@types/micro": "7.3.7",
-		"@types/node": "16.11.11"
+		"@types/node": "20.9.1"
 	}
 }
