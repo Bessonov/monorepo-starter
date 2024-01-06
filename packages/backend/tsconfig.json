@@ -3,9 +3,16 @@
 	"compilerOptions": {
 		"baseUrl": ".",
 		"rootDir": "./src",
-		"outDir": "./build"
+		"outDir": "./build",
+		"tsBuildInfoFile": "build/.tsbuildinfo",
+		"types": []
 	},
 	"include": [
 		"./src/**/*"
+	],
+	"references": [
+		{
+			"path": "../shared"
+		}
 	]
 }

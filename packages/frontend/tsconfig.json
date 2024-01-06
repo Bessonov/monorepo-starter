@@ -4,9 +4,18 @@
 		"baseUrl": ".",
 		"rootDir": "./src",
 		"outDir": "./build",
-		"jsx": "react"
+		"tsBuildInfoFile": "build/.tsbuildinfo",
+		"jsx": "react",
+		"types": [
+			"webpack-env",
+		]
 	},
 	"include": [
 		"./src/**/*"
+	],
+	"references": [
+		{
+			"path": "../shared"
+		}
 	]
 }

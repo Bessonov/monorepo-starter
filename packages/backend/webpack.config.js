@@ -1,4 +1,5 @@
 const { merge } = require('webpack-merge')
+const path = require('path')
 const NodemonPlugin = require('nodemon-webpack-plugin')
 const {
 	config,
@@ -10,9 +11,9 @@ module.exports = merge(config({
 }), {
 	name: 'backend',
 	target: 'node',
-	entry: './src/index.ts',
+	entry: './build/index.js',
 	resolve: {
-		extensions: ['.ts', '.js'],
+		extensions: ['.js'],
 	},
 	optimization: {
 		minimize: false,
@@ -21,22 +22,9 @@ module.exports = merge(config({
 	},
 	plugins: [
 		isDev && new NodemonPlugin({
+			watch: path.resolve('build', '.tsbuildinfo'),
 			delay: '100',
 			exec: 'kill-port --port 3000,9228 > /dev/null; node -r source-map-support/register --inspect=0.0.0.0:9228',
 		}),
 	].filter(Boolean),
-	module: {
-		rules: [
-			{
-				test: /\.tsx?$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'ts-loader',
-					options: {
-						transpileOnly: true,
-					},
-				},
-			},
-		],
-	},
 })

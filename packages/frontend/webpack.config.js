@@ -2,7 +2,6 @@ const path = require('path')
 const webpack = require('webpack')
 const { merge } = require('webpack-merge')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
-const ReactRefreshTypeScript = require('react-refresh-typescript')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { isDev, isProd, config } = require('../../webpack.common.config.js')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
@@ -18,7 +17,7 @@ module.exports = merge(config({
 }), {
 	name: 'frontend',
 	target: 'web',
-	entry: './src/index.tsx',
+	entry: './build/index.js',
 	output: {
 		path: path.resolve(__dirname, 'dist', ...RELEASE_PATH.split('/')),
 		publicPath: RELEASE_PATH,
@@ -57,19 +56,6 @@ module.exports = merge(config({
 	].filter(Boolean),
 	module: {
 		rules: [
-			{
-				test: /\.tsx?$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'ts-loader',
-					options: {
-						transpileOnly: true,
-						getCustomTransformers: () => ({
-							before: isDev ? [ReactRefreshTypeScript()] : [],
-						}),
-					},
-				},
-			},
 			isProd && {
 				test: /\.js$/,
 				exclude: /node_modules/,

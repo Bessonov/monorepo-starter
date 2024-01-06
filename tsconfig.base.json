@@ -5,9 +5,10 @@
 			"dom",
 			"es2019"
 		],
-		"module": "ES6",
+		"module": "ES2022",
 		"moduleResolution": "node",
 		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
 		"skipLibCheck": true,
 		"skipDefaultLibCheck": true,
 		"pretty": true,
@@ -16,7 +17,10 @@
 		"strictNullChecks": true,
 		"resolveJsonModule": true,
 		"sourceMap": true,
-		"noUncheckedIndexedAccess": true
+		"noUncheckedIndexedAccess": true,
+		"composite": true,
+		"declarationMap": true,
+		"types": []
 	},
 	"include": [
 		"./src/**/*"

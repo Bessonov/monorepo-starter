@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const ForkTsCheckerWebpackPlugin = require('fork-ts-checker-webpack-plugin')
 
 const mode = process.env.NODE_ENV ?? 'development'
 const isProd = mode === 'production'
@@ -32,15 +31,14 @@ module.exports = {
 				// https://github.com/TypeStrong/ts-loader#usage-with-webpack-watch
 				new webpack.WatchIgnorePlugin({
 					paths: [
-						/\.js$/,
+						/^\.tsbuildinfo$/,
 						/\.d\.ts$/,
 						/\.map$/,
 					]
 				}),
-				new ForkTsCheckerWebpackPlugin(),
 			].filter(Boolean),
 			resolve: {
-				extensions: ['.tsx', '.ts', '.js'],
+				extensions: ['.js'],
 				fallback: {
 					fs: false,
 					buffer: false,

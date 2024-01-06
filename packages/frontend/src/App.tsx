@@ -1,6 +1,6 @@
 import React from 'react'
 import { frontend } from 'shared'
-import './index.css'
+import '../src/index.css'
 
 export function App() {
 	return (
